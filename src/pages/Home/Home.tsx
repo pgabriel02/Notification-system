@@ -53,7 +53,7 @@ const Home = () => {
                         pos.map((p, index) => 
                             <div key={index} className={styled.notification_items_group}>
                                 <input defaultChecked={p === position} type='radio' id={p} onChange={(e) => setPosition((e.target as HTMLInputElement)?.value) } name='position'  value={p} />
-                                <label htmlFor={p}>top-left</label>
+                                <label htmlFor={p}>{p}</label>
                             </div>
                         )
                     }
