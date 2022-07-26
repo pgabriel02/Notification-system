@@ -8,6 +8,7 @@
     justify-content: center;
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 
@@ -16,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    padding-bottom: 3.5rem;
     @media(min-width: 928px) {
         width: 40%;
     }
@@ -115,9 +117,7 @@
 
 .copyright {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: .8rem;
     p {
         font-size: 1rem;
         @media(min-width: 1920px) {
