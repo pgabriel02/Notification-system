@@ -1,0 +1,131 @@
+
+.notifications {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.notification {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    @media(min-width: 928px) {
+        width: 40%;
+    }
+    @media(min-width: 1920px) {
+        width: 80%;
+        gap: 1rem;
+    }
+    h2 {
+        font-size: 1rem;
+        @media(min-width: 1920px) {
+            font-size: 2.5rem;
+        }
+    }
+    label {
+        font-size: 1rem;
+        font-weight: 600;
+        @media(min-width: 1920px) {
+            font-size: 2.5rem;
+        }
+    }
+    input {
+        border: 1px solid rgb(31, 29, 29);
+        box-shadow: 0 0 1px 0 rgb(31, 29, 29);
+        outline: none;
+        background: rgb(31, 29, 29);
+        color: #fff;
+        border-radius: .25rem;
+        padding: .5rem 2rem;
+        &[type='text'] {
+            @media(min-width: 1920px) {
+                font-size: 2rem;
+            }
+        }
+    }
+    button {
+        
+        margin-left: auto;
+        padding: .5rem 2rem;
+        background: red;
+        border: none;
+        color: #fff;
+        font-size: .9rem;
+        cursor: pointer;
+        @media(min-width: 1920px) {
+            font-size: 2rem;
+        }
+    }
+    &_items {
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 928px) {
+            flex-direction: row;
+            gap: .5rem;
+        }
+        @media(min-width: 1920px) {
+            gap: 1rem;   
+        }
+        &_group {
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+            @media(min-width: 1920px) {
+                gap: 1rem;
+            }
+        }
+    }
+}
+.notification_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 95%;
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: auto;
+    gap: .2rem;
+    @media(min-width: 928px) {
+        width: 20%;
+    }
+    &[data-position^='top-'] {
+        top: 10px;
+    }
+    &[data-position^='bottom-'] {
+        bottom: 10px;
+    }
+    &[data-position$='-left'] {
+        left: 10px;
+    }
+    &[data-position$='-right'] {
+        right: 10px;
+    }
+    &[data-position$='-center'] {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    p {
+        font-size: 1rem;
+        @media(min-width: 1920px) {
+            font-size: 3rem;
+        }
+        a {
+            text-decoration: none;
+            color: #dc3838;
+        }
+    }
+}

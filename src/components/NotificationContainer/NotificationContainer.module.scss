@@ -1,0 +1,51 @@
+.notification_container {
+    &_body {
+        display: flex;
+        align-items: center;
+        padding: .7rem .5rem;
+        width: 100%;
+        gap: 1rem;
+        cursor: pointer;
+        &_column {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-width: 0;
+            h3 {
+                font-size: 1rem;
+                @media(min-width: 1920px) {
+                    font-size: 2.5rem;
+                }
+            }
+            p {
+                max-width: 80%;
+                display: block;
+                word-wrap: break-word;
+                font-weight: 600;
+                @media(min-width: 1920px) {
+                    font-size: 2rem;
+                    max-width: 100%;
+                }
+            }
+        }
+        &_icon {
+            font-size: 2rem;
+            @media(min-width: 1920px) {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+.success {
+    background: green;
+}
+.error {
+    background: red;
+}
+.warning {
+    background: orange;
+}
+.info {
+    background: lightskyblue;
+}
